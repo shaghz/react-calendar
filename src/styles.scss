@@ -1,0 +1,71 @@
+$white: #ffffff;
+$lightGrey: #efefef;
+$secondary: #2875c7;
+$background: $white;
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+table{
+  width:100%;
+}
+body {
+  background: $lightGrey;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+.eachDay{
+  width:10px !important;
+}
+.calendar {
+  display: block;
+  background: $white;
+  margin: 10px auto;
+  text-align: center;
+
+  .day-names {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: $secondary;
+    font-weight: bold;
+    cursor: default;
+    font-size: 1.2rem;
+    td {
+      width: 100%;
+      display: flex;
+
+    }
+  }
+  .header {
+
+    color: $white;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+
+    .month-display {
+      align-items: center;
+      height: 40px;
+      background: $secondary;
+    }
+
+    .month-label {
+      flex: 1;
+    }
+
+
+
+  }
+}
+
+
