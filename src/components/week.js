@@ -1,5 +1,5 @@
 import React from 'react';
-import Day from './day';
+
 class Week extends React.Component {
 
 
@@ -18,27 +18,30 @@ class Week extends React.Component {
         let daysOfEachWeek = this.chunkWeek(weekStartDay, MonthDays);
 
         for (let i = 0; i < daysOfEachWeek.length; i++) {
-            days.push(
-                <Day
-                    date={daysOfEachWeek[i]}
-                />
-            );
+
+            for (let j = 0; j < daysOfEachWeek[i].length; j++) {
+                let day = daysOfEachWeek[i][j];
+                days.push(
+                    <td className="eachDay"> {day} </td>
+                );
+
+            }
 
         }
-        return days;
 
+        return days;
     }
 
     render() {
         let {weekStartDay, MonthDays, date} = this.props;
 
-        console.log(this.getCalendar(date, weekStartDay, MonthDays));
+        console.log('hiii'+this.getCalendar(date, weekStartDay, MonthDays));
         return (
-
+            <tbody>
             <tr>
                 {this.getCalendar(date, weekStartDay, MonthDays)}
             </tr>
-
+            </tbody>
         );
     }
 

@@ -38,7 +38,6 @@ class Calendar extends React.Component {
         let {month} = this.state;
         let date = month.format('YYYY/MM/DD');
         let weeks = [];
-        let done = false;
         let weekStartDay = month.startOf('jMonth').weekday();
         let MonthDays = parseInt(month.endOf('month').format("jD"));
         weeks.push(
@@ -57,6 +56,7 @@ console.log('weeks'+weeks)
         return (
             <section className="calendar">
                 <table>
+                    <tbody>
                     <tr className="header">
 
                             <div className="month-display row">
@@ -70,7 +70,7 @@ console.log('weeks'+weeks)
                     <tr>
                         <DayNames/>
                     </tr>
-                    <tr>hi</tr>
+                    </tbody>
                     {this.renderWeek()}
                 </table>
             </section>
